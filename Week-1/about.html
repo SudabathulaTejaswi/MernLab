@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PVPSIT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .head2 {
+            background-color: bisque;
+            padding: 10px;
+        }
+
+        .head2 ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            flex-wrap: wrap;
+        }
+
+        .head2 ul li {
+            margin: 0 10px;
+        }
+
+        .head2 ul li a {
+            text-decoration: none;
+            color: rgb(114, 5, 78);
+            font-weight: bold;
+            font-size: x-large;
+            transition: all 0.3s ease;
+        }
+
+        .head2 ul li a:hover {
+            color: rgb(170, 24, 110);
+        }
+
+        .head2 img {
+            border-radius: 0 0 50% 50%;
+            width: 150px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .head2 img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header {
+            text-align: center;
+            background-color: rgb(114, 5, 78);
+            color: white;
+            padding: 20px 10px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        .containers {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            margin: 40px 0;
+        }
+
+        h2 {
+            color: rgb(114, 5, 78);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #0b644c;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        p, ul, table {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0b644c;
+            color: white;
+        }
+
+        footer {
+            background: #000b08;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .quick-links {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .quick-links h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #f4f4f9;
+        }
+
+        .quick-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quick-links li {
+            margin: 10px 0;
+        }
+
+        .quick-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .quick-links a:hover {
+            color: #f4b400;
+        }
+
+        .copyright {
+            flex: 1;
+            min-width: 200px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .head2 ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .head2 ul li {
+                margin: 10px 0;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .quick-links {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .head2 img {
+                width: 100px;
+            }
+
+            th, td {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+
+            h2, h3 {
+                font-size: 1.4rem;
+            }
+
+            p, ul, table {
+                margin-bottom: 15px;
+            }
+
+            footer {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head2">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="department.html">Departments</a></li>
+            <li>
+                <a href="index.html">
+                    <img src="/images/logo.png" alt="Institute Logo">
+                </a>
+            </li>
+            <li><a href="t&p.html">T & P</a></li>
+            <li><a href="student.html">Student Corner</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+        </ul>
+    </div>
+    <header>
+        <h1>About Prasad V Potluri Siddhartha Institute of Technology</h1>
+    </header>
+    <div class="containers">
+
+        <section class="profile">
+            <h2>Brief Profile</h2>
+            <p>Prasad V Potluri Siddhartha Institute of Technology (PVPSIT), established in 1998, is a pioneering self-financed institution renowned for academic excellence and discipline. The college is sponsored by Siddhartha Academy of General and Technical Education, the premier organization that runs 18 educational institutions in diverse fields of study. The college offers various undergraduate and postgraduate programs.</p>
+            <p>The institution is autonomous, approved by AICTE, permanently affiliated to JNTUK, Kakinada, and accredited by NAAC with an A+ grade. The institution is ISO 9001-2015 certified and widely acclaimed for its quality standards. UGC has accorded 2f / 12B status, and the government of Andhra Pradesh has conferred an A grade to the institution.</p>
+            <p>The college is placed in the band of 101 to 150 in the NIRF Innovation stream.</p>
+        </section>
+
+        <section class="vision-mission">
+            <div class="vision">
+                <h2>Vision</h2>
+                <p>To provide a rich ambience for academic and professional excellence, research, employability skills, entrepreneurship, and social responsibility.</p>
+            </div>
+            <div class="mission">
+                <h2>Mission</h2>
+                <p>To empower the students with technical knowledge, awareness of up-to-date technical trends, inclination for research in areas of human needs, capacity building for employment/entrepreneurship, and application of technology for societal needs.</p>
+            </div>
+        </section>
+
+        <section class="hallmarks">
+            <h2>Hallmarks</h2>
+            <ul>
+                <li>ISO 9001-2015 certified institution.</li>
+                <li>NAAC A+ grade accreditation.</li>
+                <li>All UG programs accredited by NBA.</li>
+                <li>100% ragging-free environment.</li>
+                <li>Autonomous status since 2012.</li>
+                <li>Strong training and placement cell.</li>
+                <li>Entrepreneurship support and industry partnerships.</li>
+                <li>Active NSS and NCC wings promoting social responsibility.</li>
+                <li>Technical/professional societies for learning beyond the classroom.</li>
+            </ul>
+        </section>
+
+        <div class="section">
+            <h2 class="section-title">Academic Council</h2>
+            <table>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Category</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Dr. K. Sivaji Babu</td>
+                    <td>Principal, PVPSIT</td>
+                    <td>Chairman</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Dr. V. Jagadish</td>
+                    <td>Professor & Head, Civil Engg., Dept.</td>
+                    <td>Member</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Dr. A. Jaya Lakshmi</td>
+                    <td>Professor & Head, CSE Dept.</td>
+                    <td>Member</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Dr. B.Janakiramaiah</td>
+                    <td>Professor & Program Head, CSE (AI/ML) & CSE (DS)</td>
+                    <td>Member</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </table>
+        </div>
+    
+        <!-- Governing Body Section -->
+        <div class="section">
+            <h2 class="section-title">Governing Body</h2>
+            <table>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Name</th>
+                    <th>Designation</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Dr. C. Nageswara Rao</td>
+                    <td>President, SAGTE</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Sri P. Lakshmana Rao</td>
+                    <td>Secretary, SAGTE</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sri Sureddy Vishnu</td>
+                    <td>Jr. Secretary, SAGTE</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Sri Sureddi Venkateswara Rao</td>
+                    <td>Treasurer, SAGTE</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </table>
+        </div>
+    
+        <!-- IQAC Section -->
+        <div class="section">
+            <h2 class="section-title">IQAC (Internal Quality Assurance Cell)</h2>
+            <p class="content">The primary aim of the IQAC is to develop a system for conscious, consistent, and catalytic action to improve the academic and administrative performance of the institution. It facilitates the creation of a learner-centric environment, ensures the quality of academic programs, and coordinates various quality-related activities within the institution.</p>
+        </div>
+    
+        <!-- Objectives of IQAC Section -->
+        <div class="section">
+            <h2 class="section-title">Objectives of IQAC</h2>
+            <ul>
+                <li>Ensuring timely, efficient, and progressive performance of academic, administrative, and financial tasks.</li>
+                <li>Facilitating the creation of a learner-centric environment conducive to quality education.</li>
+                <li>Optimizing the integration of modern methods of teaching and learning.</li>
+                <li>Ensuring the credibility of evaluation procedures and enhancing institutional performance.</li>
+                <li>Supporting research, innovation, and faculty development programs.</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <!-- Quick Links Section -->
+            <div class="quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="department.html">Departments</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+    
+            <!-- Copyright Section -->
+            <div class="copyright">
+                <p>&copy; 2024 Prasad V Potluri Siddhartha Institute of Technology. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

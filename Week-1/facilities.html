@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Center - BTech College</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .head2 {
+            background-color: bisque;
+            padding: 10px;
+        }
+
+        .head2 ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            flex-wrap: wrap;
+        }
+
+        .head2 ul li {
+            margin: 0 10px;
+        }
+
+        .head2 ul li a {
+            text-decoration: none;
+            color: rgb(114, 5, 78);
+            font-weight: bold;
+            font-size: x-large;
+            transition: all 0.3s ease;
+        }
+
+        .head2 ul li a:hover {
+            color: rgb(170, 24, 110);
+        }
+
+        .head2 img {
+            border-radius: 0 0 50% 50%;
+            width: 150px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .head2 img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header {
+            text-align: center;
+            background-color: rgb(114, 5, 78);
+            color: white;
+            padding:10px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            color: rgb(114, 5, 78);
+            font-size: 1.8rem;
+        }
+
+        .section p {
+            font-size: 1rem;
+        }
+
+        .section ul {
+            margin-left: 20px;
+        }
+
+        .section ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #000b08;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .quick-links {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .quick-links h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #f4f4f9;
+        }
+
+        .quick-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quick-links li {
+            margin: 10px 0;
+        }
+
+        .quick-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .quick-links a:hover {
+            color: #f4b400;
+        }
+
+        .copyright {
+            flex: 1;
+            min-width: 200px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .head2 ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .head2 ul li {
+                margin: 10px 0;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .quick-links {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .head2 img {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="head2">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="department.html">Departments</a></li>
+            <li>
+                <a href="index.html">
+                    <img src="/images/logo.png" alt="Institute Logo">
+                </a>
+            </li>
+            <li><a href="t&p.html">T & P</a></li>
+            <li><a href="student.html">Student Corner</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+        </ul>
+    </div>
+    <header>
+        <h1>Facilities at PVPSIT</h1>
+    </header>
+    <main>
+        <div class="section">
+            <h2>Facilities</h2>
+            <p>Our college provides top-notch facilities to ensure the best experience for our students. These include:</p>
+            <ul>
+                <li><b>Library:</b> A fully equipped library with digital and physical resources for academic excellence.</li>
+                <li><b>Laboratories:</b> State-of-the-art labs for practical learning and research across all disciplines.</li>
+                <li><b>Hostel:</b> Comfortable and secure on-campus accommodations with all necessary amenities.</li>
+                <li><b>Cafeteria:</b> A hygienic and affordable cafeteria offering a variety of food options.</li>
+                <li><b>Sports Facilities:</b> Extensive facilities for indoor and outdoor games, including cricket, basketball, and more.</li>
+                <li><b>Medical Center:</b> A health center with trained medical professionals available 24/7.</li>
+                <li><b>Wi-Fi:</b> Campus-wide high-speed internet connectivity for academic and personal use.</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="department.html">Departments</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Prasad V Potluri Siddhartha Institute of Technology. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

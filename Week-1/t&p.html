@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>   
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .head2 
+        {
+            background-color: bisque;
+            padding:10px;
+        }
+
+        .head2 ul {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .head2 ul li {
+            margin: 0 15px;
+        }
+
+        .head2 ul li a {
+            text-decoration: none;
+            color: rgb(114, 5, 78);
+            font-weight: bold;
+            font-size: x-large;
+            transition: all 0.3s ease;
+        }
+
+        .head2 ul li a:hover {
+            color: rgb(170, 24, 110);
+            
+        }
+
+        .head2 img {
+            border-radius: 0 0 50% 50%;
+            width: 150px;
+            height: auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .head2 img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2 {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        /* Header Section */
+        header {
+            background: rgb(114, 5, 78);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        /* About Us Section */
+        .about-us {
+            padding: 30px 20px;
+            background-color: #ffffff;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        .about-us p {
+            line-height: 1.6;
+        }
+
+        /* Campus Selections Table */
+        .campus-selections table, .department-placements table, .placement-staff table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #0b644c;
+            color: white;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Activities Section */
+        .activities ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .activities li {
+            background-color: #ffffff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .containers {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        footer {
+            background: #000b08;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .quick-links {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .quick-links h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .quick-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quick-links li {
+            margin: 10px 0;
+        }
+
+        .quick-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .quick-links a:hover {
+            color: #f4b400;
+        }
+
+        .copyright {
+            flex: 1;
+            min-width: 200px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .copyright p {
+            margin: 0;
+        }
+
+
+    </style>
+    <title>Placement and Training</title>
+</head>
+<body>
+    <div class="head2">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="department.html">Departments</a></li>
+            <li>
+                <a href="index.html">
+                    <img src="/images/logo.png" alt="Institute Logo">
+                </a>
+            </li>
+            <li><a href="t&p.html">T & P</a></li>
+            <li><a href="student.html">Student Corner</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+        </ul>
+    </div>
+    <!-- Header Section -->
+    <header>
+        <h1>PVP Siddhartha Training and Placement</h1>
+        <p>We ensure your talents match the right positions</p>
+    </header>
+    <div class="containers">
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>The Training and Placement Cell of PVP Siddhartha is established with the sole aim of finding suitable employment opportunities for all eligible students. It caters to all the training requirements of students through highly experienced faculty.</p>
+        <p>The unique program of skill enhancement identifies and nurtures the talent in job aspirants and ignites the young minds to capably and confidently face the recruitment drives.</p>
+        <p>The placement cell has state-of-the-art infrastructure and a rich ambiance to facilitate the training process. The students of PVP are provided excellent training that enhances their potential and improves their confidence levels.</p>
+        <p>The facilities include a well-furnished Auditorium, GD rooms, closed interview panels, and conference halls.</p>
+    </section>
+
+    <!-- Campus Selections Section -->
+    <section class="campus-selections">
+        <h2>Campus Selections (Yearwise)</h2>
+        <table>
+            <tr>    <th>Academic Year</th>    <th>No. of Selections</th>    </tr>
+            <tr>    <td>2023-24</td>        <td>1005</td>        </tr>
+            <tr>    <td>2022-23</td>    <td>956</td>    </tr>
+            <tr>    <td>2021-22</td>    <td>1118</td>    </tr>
+            <tr>
+                <td>2020-21</td>
+                <td>954</td>
+            </tr>
+            <tr>
+                <td>2019-20</td>
+                <td>606</td>
+            </tr>
+            <tr>
+                <td>2018-19</td>
+                <td>606</td>
+            </tr>
+        </table>
+        <p><em>Placement season is in progress</em></p>
+    </section>
+
+    <!-- Departmentwise Placements Section -->
+    <section class="department-placements">
+        <h2>Departmentwise Placements</h2>
+        <table>
+            <thead>
+                <tr>  <th>Branch Name</th> <th>2023-24</th> <th>2022-23</th> <th>2021-22</th> <th>2020-21</th> <th>2019-20</th> <th>2018-19</th> </tr>
+            </thead>
+            <tbody>
+                <tr> <td>Civil</td> <td>43</td>  <td>36</td>  <td>41</td>  <td>35</td>    <td>14</td>    <td>12</td>    </tr>
+                <tr> <td>EEE</td>    <td>162</td>    <td>149</td>    <td>138</td>    <td>114</td>    <td>110</td>    <td>89</td>    </tr>
+                <tr> <td>MECH</td> <td>140</td> <td>135</td>    <td>129</td>    <td>120</td>    <td>100</td>    <td>123</td>    </tr>
+                <tr> <td>ECE </td> <td>160</td>  <td>157</td>  <td>145</td>  <td>114</td> <td>123</td>  <td>100</td>  </tr>
+                <tr> <td>CSE</td> <td>297</td> <td>290</td> <td>295</td> <td>250</td> <td>200</td> <td>200</td>  </tr>
+                <tr> <td>IT</td> <td>171</td> <td>150</td>  <td>144</td> <td>140</td> <td>122</td> <td>120</td> </tr>
+                <tr> <td>MBA</td> <td>154</td> <td>145</td>  <td>125</td>  <td>134</td> <td>80</td>  <td>78</td> </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Placement Staff Section -->
+    <section class="placement-staff">
+        <h2>Placement Staff</h2>
+        <table>
+            <tr>    <th>Name of the Staff</th>    <th>Designation</th>    <th>Qualifications</th>    <th>Mobile No.</th>    </tr>
+            <tr>    <td>Mr. G. Ramesh Babu</td>    <td>Head - Training & Placements</td>    <td>MBA</td>    <td>9246620777</td>    </tr>
+            <tr>    <td>Mr. K. Naresh Kumar</td>    <td>Asst. Training & Placement Officer</td>    <td>MBA</td>    <td>7893656735</td>    </tr>
+            <tr>    <td>Ms. L. Sudheera</td>    <td>Soft Skills Trainer</td>    <td>MBA</td>    <td>9640958999</td>    </tr>
+            <tr>    <td>Mr. K. Sai Devan</td>    <td>Soft Skills Trainer</td>    <td>MBA</td>    <td>7013506746</td>    </tr>
+            <tr>    <td>Ms. S. Kusuma Kumari</td>    <td>Jr. Programmer</td>    <td>M.Sc</td>    <td>----</td>    </tr>
+        </table>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="activities">
+        <h2>Activities</h2>
+        <ul>
+            <li><strong>Mock Interviews:</strong> A practice job interview simulating the actual interview process.</li>
+            <li><strong>Group Discussions:</strong> A comparative group activity for candidate selection.</li>
+            <li><strong>Public Speaking:</strong> Communication of information to an audience.</li>
+            <li><strong>Personality Development:</strong> Enhancing and grooming one's skills and self-confidence.</li>
+            <li><strong>Career Guidance:</strong> Services to help manage career development.</li>
+            <li><strong>Aptitude and Reasoning Sessions:</strong> Tests to assess logical reasoning and thinking performance.</li>
+            <li><strong>Campus Recruitment Drives:</strong> Programs conducted to provide jobs to students.</li>
+            <li><strong>Motivational Lectures:</strong> Lectures to motivate and inspire students.</li>
+            <li><strong>Corporate Grooming:</strong> Development of professional skills for corporate environments.</li>
+        </ul>
+    </section>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Quick Links Section -->
+            <div class="quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="department.html">Departments</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>    
+            <!-- Copyright Section -->
+            <div class="copyright">
+                <p>&copy; 2024 Prasad V Potluri Siddhartha Institute of Technology. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

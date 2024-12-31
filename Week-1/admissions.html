@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Procedure | PVPSIT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .head2 
+{
+    background-color: bisque;
+    padding: 10px;
+}
+
+.head2 ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.head2 ul li {
+    margin: 0 15px;
+}
+
+.head2 ul li a {
+    text-decoration: none;
+    color: rgb(114, 5, 78);
+    font-weight: bold;
+    font-size: x-large;
+    transition: all 0.3s ease;
+}
+
+.head2 ul li a:hover {
+    color: rgb(170, 24, 110);
+    
+}
+
+.head2 img {
+    border-radius: 0 0 50% 50%;
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.head2 img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+        header {
+            background-color: rgb(114, 5, 78);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 40px;
+            width: 80%;
+        }
+        h2 {
+            color:rgb(114, 5, 78);
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #0b644c;
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #830606;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #0b644c;
+            color: white;
+        }
+        .about-headers {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .container {
+            padding: 40px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-info h3 {
+            font-size: 2em;
+            color: #0b644c;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-info .about-headers {
+            font-weight: bold;
+            color: #0b644c;
+            font-size: 1.1em;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info .about-headers img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-info ul li {
+            margin: 10px 0;
+            font-size: 1em;
+        }
+
+        .contact-info ul li a {
+            color: #830606;
+            text-decoration: none;
+        }
+
+        .contact-info ul li a:hover {
+            color: #0b644c;
+        }
+
+        .contact-info ul li strong {
+            color: #0b644c;
+        }
+
+        /* Department Head Cards */
+        .department-heads {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .department-card {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .department-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .department-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .department-card h4 {
+            font-size: 1.2em;
+            color: #0b644c;
+            margin-bottom: 10px;
+        }
+
+        .department-card p {
+            font-size: 1em;
+            margin: 5px 0;
+        }
+
+        .department-card a {
+            color: #830606;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .department-card a:hover {
+            color: #0b644c;
+        }
+
+   
+        footer {
+    text-align: center;
+    background-color: #0b644c;
+    color: white;
+    padding: 10px 0;
+}
+footer {
+            background: #000b08;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .quick-links {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .quick-links h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #f4f4f9;
+        }
+
+        .quick-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quick-links li {
+            margin: 10px 0;
+        }
+
+        .quick-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .quick-links a:hover {
+            color: #f4b400;
+        }
+
+        .copyright {
+            flex: 1;
+            min-width: 200px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .head2 ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .head2 ul li {
+                margin: 10px 0;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .quick-links {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .head2 img {
+                width: 100px;
+            }
+
+            th, td {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+
+            h2, h3 {
+                font-size: 1.4rem;
+            }
+
+            p, ul, table {
+                margin-bottom: 15px;
+            }
+
+            footer {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="head2">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="department.html">Departments</a></li>
+            <li>
+                <a href="index.html">
+                    <img src="/images/logo.png" alt="Institute Logo">
+                </a>
+            </li>
+            <li><a href="t&p.html">T & P</a></li>
+            <li><a href="student.html">Student Corner</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+        </ul>
+    </div>
+<header>
+    <h1>Admission Procedure - PVPSIT</h1>
+</header>
+
+<div class="container">
+
+    <!-- Admission Procedure Section -->
+    <div class="section">
+        <h2 class="section-title">Admission Procedure</h2>
+        <p class="content">Admission into UG and PG programmes of the Institution is based on State level Common entrance tests conducted by the Government of Andhra Pradesh.</p>
+        <p><strong>Undergraduate Engineering Programme:</strong> Admission is based on State Level Common Entrance Test i.e., EAMCET / ECET, conducted by Government of Andhra Pradesh.</p>
+        <p><strong>MBA Course:</strong> Admission is based on the state level common entrance test, ICET, conducted by the Government of Andhra Pradesh.</p>
+        <p><strong>M.Tech Programme:</strong> Admission is based on PGECET conducted by the Government of Andhra Pradesh and all India GATE exam.</p>
+    </div>
+
+    <!-- Eligibility Section -->
+    <div class="section">
+        <h2 class="section-title">Eligibility</h2>
+        <p>The eligibility criteria for admission into UG & PG programmes are as per the norms approved by Government of Andhra Pradesh from time to time.</p>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="section">
+        <h2 class="section-title">Categories</h2>
+        <p class="highlight">Category - A:</p>
+        <p>For both U.G and P.G Programs, 70% of the seats will be allocated based on the common entrance test i.e., EAMCET/ICET/PGECET conducted by Government of Andhra Pradesh and GATE Rank based for M.Tech Admission.</p>
+        <p class="highlight">Category - B:</p>
+        <p>30% of the seats are filled under Management / NRI category as per the norms / regulations prescribed by the Andhra Pradesh State Council of Higher Education.</p>
+        <p><strong>Lateral Entry Programmes:</strong> 10% of the Actual Intake and Vacancy Seats of Convener Quota in Previous Year (If any) seats are filled under the Lateral Entry based on the common entrance test i.e., ECET conducted by the Government of Andhra Pradesh.</p>
+    </div>
+
+    <!-- Fee Structure Section -->
+    <div class="section">
+        <h2 class="section-title">Fee Structure</h2>
+
+        <!-- Undergraduate Fee Structure -->
+        <h3>Undergraduate Fee Structure</h3>
+        <table>
+            <tr>
+                <th>S.no</th>
+                <th>Course</th>
+                <th>Category-A (APEAPCET) Convenor quota</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Computer Science and Engineering</td>
+                <td>₹ 1,05,000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Information Technology</td>
+                <td>₹ 1,05,000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Electronics & Communication Engineering</td>
+                <td>₹ 1,05,000</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Computer Science and Engineering - Specialization in Artificial Intelligence and Machine Learning</td>
+                <td>₹ 1,05,000</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Computer Science and Engineering - Specialization in Data Science</td>
+                <td>₹ 1,05,000</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Mechanical Engineering</td>
+                <td>₹ 1,05,000</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Electrical & Electronics Engineering</td>
+                <td>₹ 1,05,000</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Civil Engineering</td>
+                <td>₹ 1,05,000</td>
+            </tr>
+        </table>
+
+        <!-- Post Graduate Fee Structure -->
+        <h3>Post Graduate Fee Structure</h3>
+        <table>
+            <tr>
+                <th>S.no</th>
+                <th>Course</th>
+                <th>Category-A (APEAPCET) Convenor quota</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Master of Business Administration</td>
+                <td>₹ 60,000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>M.Tech. - Machine Design</td>
+                <td>₹ 77,000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>M.Tech. - Microwave & Communication Engineering</td>
+                <td>₹ 77,000</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Courses Offered Section -->
+    <div class="section">
+        <h2 class="section-title">Engineering B.Tech Programmes Offered</h2>
+        <table>
+            <tr>
+                <th>S.no</th>
+                <th>AP EAPCET CODE</th>
+                <th>Branch</th>
+                <th>Intake</th>
+                <th>Starting Year</th>
+                <th>NBA Accredited</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>CSE</td>
+                <td>Computer Science and Engineering</td>
+                <td>240</td>
+                <td>1999</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>INF</td>
+                <td>Information Technology</td>
+                <td>120</td>
+                <td>1998</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>ECE</td>
+                <td>Electronics & Communication Engineering</td>
+                <td>120</td>
+                <td>2000</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>CSM</td>
+                <td>Computer Science and Engineering (AI & ML)</td>
+                <td>60</td>
+                <td>2022</td>
+                <td>NA</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>CSD</td>
+                <td>Computer Science and Engineering (Data Science)</td>
+                <td>60</td>
+                <td>2022</td>
+                <td>NA</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>MEC</td>
+                <td>Mechanical Engineering</td>
+                <td>60</td>
+                <td>1998</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>EEE</td>
+                <td>Electrical & Electronics Engineering</td>
+                <td>60</td>
+                <td>2001</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>CIV</td>
+                <td>Civil Engineering</td>
+                <td>60</td>
+                <td>2008</td>
+                <td>Yes</td>
+            </tr>
+        </table>
+
+        <h2 class="section-title">Post Graduate Programmes Offered</h2>
+        <table>
+            <tr>
+                <th>S.no</th>
+                <th>CET Code</th>
+                <th>Branch</th>
+                <th>Intake</th>
+                <th>Starting Year</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>MBA</td>
+                <td>Master of Business Administration</td>
+                <td>60</td>
+                <td>2008</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>JKMCDG</td>
+                <td>M.Tech. - Machine Design</td>
+                <td>6</td>
+                <td>2007</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>JKMWCE</td>
+                <td>M.Tech. - Microwave & Communication Engineering</td>
+                <td>6</td>
+                <td>2010</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div class="contact-info">
+        <h3>Contact Us</h3>
+
+        <div class="about-headers">
+            <img src="your-image-path.jpg" alt="Principal Image"> <!-- Replace with your actual image -->
+            <span>Principal Address for Communication:</span>
+        </div>
+        <ul>
+            <li><strong>Dr. K. Sivaji Babu</strong>, Principal</li>
+            <li>Prasad V. Potluri Siddhartha Institute Of Technology, Kanuru, Vijayawada-520 007, Andhra Pradesh, India</li>
+            <li>Tel: 0866-2581699</li>
+            <li>Email: <a href="mailto:principal@pvpsiddhartha.ac.in">principal@pvpsiddhartha.ac.in</a></li>
+            <li>Mobile: 9490958212</li>
+        </ul>
+
+        <div class="about-headers">
+            <img src="your-image-path.jpg" alt="Admin Office Image">
+            <span>Administrative Office:</span>
+        </div>
+        <ul>
+            <li>Prasad V. Potluri Siddhartha Institute Of Technology, Kanuru, Vijayawada-520 007, Andhra Pradesh, India</li>
+            <li>Tel: 0866-2581699, 0866-2583037, 0866-2585681, 0866-2585682</li>
+            <li>Fax: 0866-2581184</li>
+        </ul>
+
+        <div class="about-headers">
+            <img src="your-image-path.jpg" alt="Placement Officer Image">
+            <span>Training and Placement Officer:</span>
+        </div>
+        <ul>
+            <li><strong>Mr. G. Ramesh Babu</strong>, Training & Placement Officer</li>
+            <li>Prasad V. Potluri Siddhartha Institute Of Technology, Kanuru, Vijayawada-520 007, Andhra Pradesh, India</li>
+            <li>Tel: 0866-2581699 extn.250</li>
+            <li>Direct No: +91866-6528285</li>
+        </ul>
+
+        <div class="about-headers">
+            <img src="your-image-path.jpg" alt="Department Heads Image">
+            <span>Department Heads:</span>
+        </div>
+        <div class="department-heads">
+            <div class="department-card">
+                <img src="hodcse-image.jpg" alt="CSE Head">
+                <h4>Dr. A. Jayalakshmi</h4>
+                <p><strong>CSE Head</strong></p>
+                <p>Mobile: 9490743501</p>
+                <p>Email: <a href="mailto:hodcse@pvpsiddhartha.ac.in">hodcse@pvpsiddhartha.ac.in</a></p>
+            </div>
+
+            <div class="department-card">
+                <img src="janakiramaiah-image.jpg" alt="AI & ML Head">
+                <h4>Dr. B. Janakiramaiah</h4>
+                <p><strong>AI & ML Head</strong></p>
+                <p>Mobile: 9440586340</p>
+                <p>Email: <a href="mailto:janakiramaiah@pvpsiddhartha.ac.in">janakiramaiah@pvpsiddhartha.ac.in</a></p>
+            </div>
+
+            <div class="department-card">
+                <img src="hodit-image.jpg" alt="IT Head">
+                <h4>Dr. B.V. Subba Rao</h4>
+                <p><strong>IT Head</strong></p>
+                <p>Mobile: 9440109139</p>
+                <p>Email: <a href="mailto:hodit@pvpsiddhartha.ac.in">hodit@pvpsiddhartha.ac.in</a></p>
+            </div>
+
+            <!-- Add other department cards here -->
+        </div>
+
+        <div class="about-headers">
+            <img src="your-image-path.jpg" alt="Verification Image">
+            <span>Academic Verifications:</span>
+        </div>
+        <ul>
+            <li><strong>Dr. M. S. R Niranjan Kumar</strong>, Professor & COE, Mobile: 9440491356, Email: <a href="mailto:coe@pvpsiddhartha.ac.in">coe@pvpsiddhartha.ac.in</a></li>
+        </ul>
+    </div>
+    </div>
+<footer>
+    <div class="footer-container">
+        <!-- Quick Links Section -->
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="department.html">Departments</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="copyright">
+            <p>&copy; 2024 Prasad V Potluri Siddhartha Institute of Technology. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

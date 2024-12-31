@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Departments</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    .head2 
+{
+    background-color: bisque;
+    padding: 10px;
+}
+
+.head2 ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.head2 ul li {
+    margin: 0 15px;
+}
+
+.head2 ul li a {
+    text-decoration: none;
+    color: rgb(114, 5, 78);
+    font-weight: bold;
+    font-size: x-large;
+    transition: all 0.3s ease;
+}
+
+.head2 ul li a:hover {
+    color: rgb(170, 24, 110);
+    
+}
+
+.head2 img {
+    border-radius: 0 0 50% 50%;
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.head2 img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+    header {
+      background-color:  rgb(114, 5, 78);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+      text-decoration: none;
+      color: #0b644c;
+      font-weight: bold;
+      padding: 10px 15px;
+      border: 2px solid #0b644c;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background-color: #0b644c;
+      color: white;
+    }
+    .content-container {
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 1200px;
+    }
+    .department {
+      margin-bottom: 20px;
+      display: none;
+    }
+    /* Show department content when the department is targeted */
+    .department:target {
+      display: block;
+    }
+    .department h2 {
+      color: #0b644c;
+      border-bottom: 2px solid #0b644c;
+      padding-bottom: 5px;
+    }
+    .department ul {
+      list-style: square inside;
+      margin: 10px 0;
+      padding: 0;
+    }
+    footer {
+            background: #000b08;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .quick-links {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .quick-links h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #f4f4f9;
+        }
+
+        .quick-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quick-links li {
+            margin: 10px 0;
+        }
+
+        .quick-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .quick-links a:hover {
+            color: #f4b400;
+        }
+
+        .copyright {
+            flex: 1;
+            min-width: 200px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .head2 ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .head2 ul li {
+                margin: 10px 0;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .quick-links {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .head2 img {
+                width: 100px;
+            }
+        }
+
+        /* General styling for the section */
+#all-departments-overview {
+  background-color: #f4f7f6; /* Light grey background */
+  padding: 40px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading Style */
+#all-departments-overview h2,
+#all-departments-overview h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#all-departments-overview h3 {
+  font-size: 24px;
+  color: #007bff; /* Accent color for subheadings */
+}
+
+/* Paragraph Styling */
+#all-departments-overview p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Strong text (emphasis) */
+#all-departments-overview strong {
+  font-weight: bold;
+  color: #007bff; /* Highlighted color */
+}
+
+/* Unordered list styling */
+#all-departments-overview ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+#all-departments-overview ul li {
+  background-size: 16px 16px;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+#all-departments-overview ul li strong {
+  color: #1e72f0;
+}
+
+/* Links in the paragraph */
+#all-departments-overview a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#all-departments-overview a:hover {
+  text-decoration: underline;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #ffffff; /* White background for testimonials */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.testimonials blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #007bff; /* Accent line for blockquote */
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.testimonials blockquote:last-child {
+  margin-bottom: 0;
+}
+
+.testimonials p {
+  font-size: 16px;
+  color: #555;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Alumni Success Stories */
+#all-departments-overview ul li {
+  font-size: 16px;
+  padding: 5px 0;
+}
+
+#all-departments-overview ul li strong {
+  color: #007bff; /* Accent color for alumni names */
+}
+
+/* Future Vision Section */
+#all-departments-overview .future-vision {
+  background-color: #e9f7fd; /* Light blue background for future vision */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+#all-departments-overview .future-vision p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  #all-departments-overview {
+    padding: 20px;
+  }
+
+  #all-departments-overview h2 {
+    font-size: 24px;
+  }
+
+  #all-departments-overview h3 {
+    font-size: 20px;
+  }
+
+  #all-departments-overview p {
+    font-size: 14px;
+  }
+
+  #all-departments-overview ul li {
+    font-size: 14px;
+  }
+
+  .testimonials blockquote {
+    font-size: 14px;
+  }
+
+  .testimonials p {
+    font-size: 14px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="head2">
+    <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="department.html">Departments</a></li>
+        <li>
+            <a href="index.html">
+                <img src="/images/logo.png" alt="Institute Logo">
+            </a>
+        </li>
+        <li><a href="t&p.html">T & P</a></li>
+        <li><a href="student.html">Student Corner</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+    </ul>
+</div>
+  <header>
+    <h1>Our Departments</h1>
+  </header>
+  <nav>
+    <a href="#cse" style="display: block;">CSE</a>
+    <a href="#it">IT</a>
+    <a href="#ai_ml">AI & ML</a>
+    <a href="#ai_ds">AI & DS</a>
+    <a href="#ece">ECE</a>
+    <a href="#mech">Mechanical</a>
+    <a href="#eee">EEE</a>
+    <a href="#civil">Civil</a>
+    <a href="#mtech">MTech</a>
+    <a href="#mba">MBA</a>
+  </nav>
+
+
+  <div class="content-container">
+    <div id="all-departments-overview" >
+      <h2>Overview of All Departments</h2>
+      <p>
+        At our institute, we pride ourselves on offering a diverse range of academic programs tailored to meet the demands of modern industries and research advancements. Each department provides a structured curriculum, robust academic calendar, and a plethora of opportunities for skill development and career growth.
+      </p>
+      <p><strong>Common Features Across Departments:</strong></p>
+      <ul>
+        <li><strong>Academic Excellence:</strong> Comprehensive 4-year undergraduate programs (8 semesters) designed to blend theoretical knowledge with practical applications.</li>
+        <li><strong>Industry Collaborations:</strong> Strong ties with leading companies provide students with internships, training programs, and direct placement opportunities.</li>
+        <li><strong>Placement Support:</strong> Dedicated placement cells ensure students secure jobs with top recruiters, including multinational companies and startups.</li>
+        <li><strong>Research Opportunities:</strong> Faculty-led and student-driven research projects encourage innovation and critical thinking.</li>
+        <li><strong>Infrastructure:</strong> State-of-the-art laboratories, libraries, and resources across all departments to support learning and experimentation.</li>
+        <li><strong>Skill Development:</strong> Focused on technical, managerial, and interpersonal skills through projects, workshops, and seminars.</li>
+        <li><strong>Global Exposure:</strong> Opportunities for exchange programs, conferences, and collaborations with international universities.</li>
+      </ul>
+      <p>
+        Each department is led by distinguished faculty members with expertise in their respective domains, ensuring quality education and mentorship. From core engineering branches like Mechanical and Civil to cutting-edge fields like Artificial Intelligence and Data Science, our programs are designed to equip students with the skills and knowledge required to excel in the 21st century.
+      </p>
+      <p>
+        Explore the detailed offerings and accomplishments of each department by clicking on their respective links above.
+      </p>
+    </div>
+    
+     <!-- Computer Science and Engineering -->
+<div id="cse" class="department">
+  <h2>Computer Science and Engineering (CSE)</h2>
+  <p><strong>Academic Calendar:</strong></p>
+  <ul>
+    <li>Semester 1: July - November</li>
+    <li>Semester 2: January - May</li>
+    <li>Projects & Internships: June - August</li>
+  </ul>
+  <p><strong>Placement Data:</strong> 250 students placed in 2023, with top recruiters including Google, Microsoft, and Amazon.</p>
+  <p><strong>Courses:</strong> Data Structures, Algorithms, Operating Systems, Web Development, Machine Learning, etc.</p>
+  <p><strong>Structure:</strong> 4-year undergraduate program, divided into 8 semesters.</p>
+  <p><strong>Syllabus:</strong></p>
+  <ul>
+    <li>Semester 1: Programming, Computer Fundamentals, Mathematics</li>
+    <li>Semester 2: Data Structures, Algorithms, Discrete Mathematics</li>
+    <li>Semester 3: Database Management, Software Engineering</li>
+    <li>Semester 4: AI & ML, Web Development</li>
+    <li>Semester 5-8: Advanced topics, projects, internships</li>
+  </ul>
+</div>
+
+<!-- Information Technology -->
+<div id="it" class="department">
+  <h2>Information Technology (IT)</h2>
+  <p><strong>Academic Calendar:</strong></p>
+  <ul>
+    <li>Semester 1: July - November</li>
+    <li>Semester 2: January - May</li>
+    <li>Industry Training: June - August</li>
+  </ul>
+  <p><strong>Placement Data:</strong> 180 students placed in 2023, with notable recruiters such as Infosys, TCS, and Wipro.</p>
+  <p><strong>Courses:</strong> Computer Networks, Software Engineering, Web Technologies, Cloud Computing, etc.</p>
+  <p><strong>Structure:</strong> 4-year undergraduate program, divided into 8 semesters.</p>
+  <p><strong>Syllabus:</strong></p>
+  <ul>
+    <li>Semester 1: Programming, Networking Fundamentals, Mathematics</li>
+    <li>Semester 2: Software Engineering, Data Structures</li>
+    <li>Semester 3: Operating Systems, Database Management</li>
+    <li>Semester 4: Web Development, Cloud Computing</li>
+    <li>Semester 5-8: Advanced IT topics, projects, internships</li>
+  </ul>
+</div>
+
+<!-- Artificial Intelligence & Machine Learning -->
+<div id="ai_ml" class="department">
+  <h2>Artificial Intelligence & Machine Learning (AI & ML)</h2>
+  <p><strong>Academic Calendar:</strong></p>
+  <ul>
+    <li>Semester 1: August - December</li>
+    <li>Semester 2: January - June</li>
+    <li>Internships & Research: July - September</li>
+  </ul>
+  <p><strong>Placement Data:</strong> 120 students placed in 2023, with companies like NVIDIA, IBM, and Meta.</p>
+  <p><strong>Courses:</strong> Introduction to AI, Machine Learning Algorithms, Deep Learning, Natural Language Processing, etc.</p>
+  <p><strong>Structure:</strong> 4-year undergraduate program, divided into 8 semesters.</p>
+  <p><strong>Syllabus:</strong></p>
+  <ul>
+    <li>Semester 1: Fundamentals of AI, Programming, Mathematics</li>
+    <li>Semester 2: ML Algorithms, Probability, Linear Algebra</li>
+    <li>Semester 3: Deep Learning, Data Analysis</li>
+    <li>Semester 4: NLP, Computer Vision</li>
+    <li>Semester 5-8: Advanced topics, capstone projects</li>
+  </ul>
+</div>
+
+<!-- Artificial Intelligence & Data Science -->
+<div id="ai_ds" class="department">
+  <h2>Artificial Intelligence & Data Science (AI & DS)</h2>
+  <p><strong>Academic Calendar:</strong></p>
+  <ul>
+    <li>Semester 1: July - November</li>
+    <li>Semester 2: January - May</li>
+    <li>Capstone Projects: June - August</li>
+  </ul>
+  <p><strong>Placement Data:</strong> 110 students placed in 2023, with recruiters like Deloitte, SAP, and Accenture.</p>
+  <p><strong>Courses:</strong> Data Mining, Statistical Modeling, AI in Healthcare, Big Data Analytics, etc.</p>
+  <p><strong>Structure:</strong> 4-year undergraduate program, divided into 8 semesters.</p>
+  <p><strong>Syllabus:</strong></p>
+  <ul>
+    <li>Semester 1: Data Science Basics, Programming, Mathematics</li>
+    <li>Semester 2: Statistical Analysis, Database Management</li>
+    <li>Semester 3: Machine Learning, Data Visualization</li>
+    <li>Semester 4: Big Data, Advanced Analytics</li>
+    <li>Semester 5-8: Applied Data Science, research projects</li>
+  </ul>
+</div>
+<!-- Electronics and Communication Engineering -->
+<div id="ece" class="department">
+  <h2>Electronics and Communication Engineering (ECE)</h2>
+  <p><strong>Academic Calendar:</strong></p>
+  <ul>
+    <li>Semester 1: July - November</li>
+    <li>Semester 2: January - May</li>
+    <li>Projects & Internships: June - August</li>
+  </ul>
+  <p><strong>Placement Data:</strong> 220 students placed in 2023, with companies like Qualcomm, Intel, and Samsung.</p>
+  <p><strong>Courses:</strong> Digital Electronics, Communication Systems, VLSI Design, Embedded Systems, etc.</p>
+  <p><strong>Structure:</strong> 4-year undergraduate program, divided into 8 semesters.</p>
+  <p><strong>Syllabus:</strong></p>
+  <ul>
+    <li>Semester 1: Basic Electronics, Mathematics, Physics</li>
+    <li>Semester 2: Digital Logic, Circuit Analysis</li>
+    <li>Semester 3: Communication Systems, Microprocessors</li>
+    <li>Semester 4: Signal Processing, Embedded Systems</li>
+    <li>Semester 5-8: Advanced topics, internships, projects</li>
+  </ul>
+</div>
+
+<!-- Mechanical Engineering -->
+<div id="mech" class="department">
+  <h2>Mechanical Engineering</h2>
+  <p><strong>Academic Calendar:</strong></p>
+  <ul>
+    <li>Semester 1: July - November</li>
+    <li>Semester 2: January - May</li>
+    <li>Industry Training: June - August</li>
+  </ul>
+  <p><strong>Placement Data:</strong> 200 students placed in 2023, with top recruiters including Tata Motors, Bosch, and GE.</p>
+  <p><strong>Courses:</strong> Thermodynamics, Fluid Mechanics, Heat Transfer, Robotics, CAD/CAM, etc.</p>
+  <p><strong>Structure:</strong> 4-year undergraduate program, divided into 8 semesters.</p>
+  <p><strong>Syllabus:</strong></p>
+  <ul>
+    <li>Semester 1: Engineering Mechanics, Mathematics</li>
+    <li>Semester 2: Fluid Mechanics, Strength of Materials</li>
+    <li>Semester 3: Thermodynamics, Heat Transfer</li>
+    <li>Semester 4: Manufacturing Processes, Robotics</li>
+    <li>Semester 5-8: Advanced topics, internships, research</li>
+  </ul>
+</div>
+
+<!-- Civil Engineering -->
+<div id="civil" class="department">
+  <h2>Civil Engineering</h2>
+  <p><strong>Academic Calendar:</strong></p>
+  <ul>
+    <li>Semester 1: July - November</li>
+    <li>Semester 2: January - May</li>
+    <li>Industry Training: June - August</li>
+  </ul>
+  <p><strong>Placement Data:</strong> 180 students placed in 2023, with companies like L&T, DLF, and Shapoorji Pallonji.</p>
+  <p><strong>Courses:</strong> Structural Engineering, Geotechnical Engineering, Hydraulics, Construction Management, etc.</p>
+  <p><strong>Structure:</strong> 4-year undergraduate program, divided into 8 semesters.</p>
+  <p><strong>Syllabus:</strong></p>
+  <ul>
+    <li>Semester 1: Engineering Mechanics, Surveying</li>
+    <li>Semester 2: Structural Analysis, Hydraulics</li>
+    <li>Semester 3: Geotechnical Engineering, Concrete Technology</li>
+    <li>Semester 4: Environmental Engineering, Construction Planning</li>
+    <li>Semester 5-8: Advanced topics, internships, real-world projects</li>
+  </ul>
+</div>
+
+<!-- M.Tech (Master of Technology) -->
+<div id="mtech" class="department">
+  <h2>Master of Technology (M.Tech)</h2>
+  <p><strong>Academic Calendar:</strong></p>
+  <ul>
+    <li>Semester 1: July - December</li>
+    <li>Semester 2: January - June</li>
+    <li>Research Work: July - August</li>
+  </ul>
+  <p><strong>Placement Data:</strong> 150 students placed in 2023, with roles in research, development, and academia at organizations like DRDO, ISRO, and IITs.</p>
+  <p><strong>Specializations:</strong> AI, Data Science, Structural Engineering, VLSI, Robotics, etc.</p>
+  <p><strong>Structure:</strong> 2-year postgraduate program, divided into 4 semesters.</p>
+  <p><strong>Syllabus:</strong></p>
+  <ul>
+    <li>Semester 1: Advanced Core Courses, Electives</li>
+    <li>Semester 2: Research Methodology, Minor Projects</li>
+    <li>Semester 3: Dissertation Work</li>
+    <li>Semester 4: Thesis Submission & Viva</li>
+  </ul>
+</div>
+
+<!-- MBA (Master of Business Administration) -->
+<div id="mba" class="department">
+  <h2>Master of Business Administration (MBA)</h2>
+  <p><strong>Academic Calendar:</strong></p>
+  <ul>
+    <li>Semester 1: August - December</li>
+    <li>Semester 2: January - May</li>
+    <li>Internship: June - July</li>
+  </ul>
+  <p><strong>Placement Data:</strong> 300 students placed in 2023, with top companies like Deloitte, McKinsey, and Goldman Sachs hiring.</p>
+  <p><strong>Specializations:</strong> Finance, Marketing, Human Resources, Operations, Business Analytics, etc.</p>
+  <p><strong>Structure:</strong> 2-year postgraduate program, divided into 4 semesters.</p>
+  <p><strong>Syllabus:</strong></p>
+  <ul>
+    <li>Semester 1: Financial Accounting, Organizational Behavior</li>
+    <li>Semester 2: Marketing, Operations, Business Law</li>
+    <li>Semester 3: Specialization Courses, Strategic Management</li>
+    <li>Semester 4: Capstone Projects, Internships</li>
+  </ul>
+</div>
+<!-- Electrical and Electronics Engineering -->
+<div id="eee" class="department">
+  <h2>Electrical and Electronics Engineering (EEE)</h2>
+  <p><strong>Academic Calendar:</strong></p>
+  <ul>
+    <li>Semester 1: July - November</li>
+    <li>Semester 2: January - May</li>
+    <li>Industry Training: June - August</li>
+  </ul>
+  <p><strong>Placement Data:</strong> 190 students placed in 2023, with companies like Siemens, ABB, and Schneider Electric recruiting.</p>
+  <p><strong>Courses:</strong> Electrical Machines, Power Systems, Control Systems, Power Electronics, Renewable Energy, etc.</p>
+  <p><strong>Structure:</strong> 4-year undergraduate program, divided into 8 semesters.</p>
+  <p><strong>Syllabus:</strong></p>
+  <ul>
+    <li>Semester 1: Basic Electrical Engineering, Mathematics</li>
+    <li>Semester 2: Circuit Theory, Signals and Systems</li>
+    <li>Semester 3: Power Systems, Electrical Machines</li>
+    <li>Semester 4: Control Systems, Power Electronics</li>
+    <li>Semester 5-8: Advanced topics, internships, research projects</li>
+  </ul>
+</div>
+
+
+  </div>
+
+  <footer>
+    <div class="footer-container">
+        <!-- Quick Links Section -->
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="department.html">Departments</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="copyright">
+            <p>&copy; 2024 Prasad V Potluri Siddhartha Institute of Technology. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
